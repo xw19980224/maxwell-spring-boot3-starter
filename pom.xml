@@ -12,10 +12,10 @@
 
     <groupId>io.github.xw19980224</groupId>
     <artifactId>maxwell-spring-boot3-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>maxwell-spring-boot3-starter</name>
     <description>maxwell-spring-boot3-starter</description>
-    <url>https://github.com/xw19980224/maxwell-spring-boot-starter.git</url>
+    <url>https://github.com/xw19980224/maxwell-spring-boot3-starter.git</url>
 
     <licenses>
         <license>
@@ -25,9 +25,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git@github.com:xw19980224/maxwell-spring-boot-starter.git</connection>
-        <developerConnection>scm:git@github.com:xw19980224/maxwell-spring-boot-starter.git</developerConnection>
-        <url>https://github.com/xw19980224/maxwell-spring-boot-starter.git</url>
+        <connection>scm:git@github.com:xw19980224/maxwell-spring-boot3-starter.git</connection>
+        <developerConnection>scm:git@github.com:xw19980224/maxwell-spring-boot3-starter.git</developerConnection>
+        <url>https://github.com/xw19980224/maxwell-spring-boot3-starter.git</url>
     </scm>
     <developers>
         <developer>
