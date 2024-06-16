@@ -1,0 +1,16 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: @application.name@
+    artifactId: @project.artifactId@
+    version: @project.version@
+    description: @project.description@
+  config:
+    import:
+      - classpath:/maxwell-config/maxwell-core.yml
+      - classpath:/maxwell-config/maxwell-db.yml
+      - classpath:/maxwell-config/maxwell-redis.yml
+  profiles:
+    active: dev
