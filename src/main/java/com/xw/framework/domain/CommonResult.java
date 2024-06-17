@@ -1,5 +1,7 @@
 package com.xw.framework.domain;
 
+import cn.hutool.json.JSONUtil;
+
 import java.io.Serializable;
 
 /**
@@ -20,10 +22,10 @@ public class CommonResult<T> implements Serializable {
      */
     private T data;
 
-    protected CommonResult() {
+    public CommonResult() {
     }
 
-    protected CommonResult(long code, String message, T data) {
+    public CommonResult(long code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -144,5 +146,10 @@ public class CommonResult<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return JSONUtil.toJsonStr(this);
     }
 }

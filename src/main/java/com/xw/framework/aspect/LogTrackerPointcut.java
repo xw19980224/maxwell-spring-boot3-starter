@@ -1,5 +1,6 @@
 package com.xw.framework.aspect;
 
+import cn.hutool.json.JSONUtil;
 import com.xw.framework.annotation.LogTracker;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -42,8 +43,8 @@ public class LogTrackerPointcut {
                 method.getDeclaringClass().getName(),
                 method.getName(),
                 method.getDeclaredAnnotation(LogTracker.class).value(),
-                params,
-                proceed,
+                JSONUtil.toJsonStr(params),
+                JSONUtil.toJsonStr(proceed),
                 stopWatch.getLastTaskTimeMillis());
 
         return proceed;
