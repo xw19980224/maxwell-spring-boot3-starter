@@ -13,14 +13,12 @@ import org.springframework.web.servlet.HandlerInterceptor;
  */
 public class LogInterceptor implements HandlerInterceptor {
 
-    private static final String TRACE_ID = "TRACE_ID";
-
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         //可以考虑让客户端传入链路ID，但需保证一定的复杂度唯一性；如果没使用默认UUID自动生成
         String traceId = request.getHeader(MDCTraceUtil.TRACE_ID_HEADER);
         if (!StringUtils.isEmpty(traceId)) {
-            MDCTraceUtil.putTrace(request.getHeader(MDCTraceUtil.TRACE_ID_HEADER));
+            MDCTraceUtil.putTrace(traceId);
         } else {
             MDCTraceUtil.addTrace();
         }

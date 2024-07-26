@@ -12,7 +12,7 @@ public class MDCTraceUtil {
     /**
      * 追踪id的名称
      */
-    public static final String KEY_TRACE_ID = "traceId";
+    private static final String TRACE_ID = "TRACE_ID";
 
     /**
      * 日志链路追踪id信息头
@@ -26,28 +26,28 @@ public class MDCTraceUtil {
     public static void addTrace() {
         String traceId = createTraceId();
         // MDC(Mapped Diagnostic Context)诊断上下文映射，是@Slf4j提供的一个支持动态打印日志信息的工具。
-        MDC.put(KEY_TRACE_ID, traceId);
+        MDC.put(TRACE_ID, traceId);
     }
 
     /**
      * 赋值MDC
      */
     public static void putTrace(String traceId) {
-        MDC.put(KEY_TRACE_ID, traceId);
+        MDC.put(TRACE_ID, traceId);
     }
 
     /**
      * 获取MDC中的traceId值
      */
     public static String getTraceId() {
-        return MDC.get(KEY_TRACE_ID);
+        return MDC.get(TRACE_ID);
     }
 
     /**
      * 清除MDC的值
      */
     public static void removeTrace() {
-        MDC.remove(KEY_TRACE_ID);
+        MDC.remove(TRACE_ID);
     }
 
     /**

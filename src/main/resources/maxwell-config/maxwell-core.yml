@@ -35,3 +35,9 @@ management:
         enabled: true
     tags:
       application: ${spring.application.name}
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 #采样率默认0.1(10次只能有一次被记录)，值越大手机越及时
