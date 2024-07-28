@@ -12,7 +12,7 @@ public class CommonResult<T> implements Serializable {
     /**
      * 状态码
      */
-    private long code;
+    private int code;
     /**
      * 提示信息
      */
@@ -25,7 +25,7 @@ public class CommonResult<T> implements Serializable {
     public CommonResult() {
     }
 
-    public CommonResult(long code, String message, T data) {
+    public CommonResult(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -124,11 +124,11 @@ public class CommonResult<T> implements Serializable {
         return ResultCode.SUCCESS.getCode() == code;
     }
 
-    public long getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(long code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
