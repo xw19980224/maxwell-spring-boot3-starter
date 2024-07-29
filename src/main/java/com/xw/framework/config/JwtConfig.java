@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "maxwell.jwt")
 public class JwtConfig {
     private String headerName = "Authorization";
+    private String tokenHead = "Bearer ";
     private String key;
     private String secret;
     private int expireTime = 7200;
